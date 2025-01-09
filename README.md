@@ -24,3 +24,10 @@ I registered my domain name `sean-seungeon.com` in Route53. The pricing was $14/
 
 ## Configure Route53 to S3 buckets
 I create **2 A records** in my domain.
+
+# Jan 8 2025
+
+## Plan to Set Up Github Action
+In order to automate S3 upload process, I felt a need to set up a **Github Action**. so that everytime there are changes in pages, Github triggers CI pipeline and automatically uploads to S3 bucket.
+
+So I created a default Github Action. This should be a good starting point to think how my pipeline looks.
