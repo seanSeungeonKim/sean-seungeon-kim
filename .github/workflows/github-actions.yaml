@@ -10,7 +10,8 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
-      - run: echo "Latest Commit checked out! SHA:\ ${{ github.event.head_commit.message }} Message:\ ${{ github.event.workflow_run.head_commit.message }} "
+      - run: echo "Latest Commit SHA - ${{ github.sha }} "
+      - run: echo "Latest Commit Message - ${{ github.event.head_commit.message }}"
       # - name: Configure AWS Credentials
       #   uses: aws-actions/configure-aws-credentials@v4
       #   with:
