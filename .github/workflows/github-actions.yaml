@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+env:
+  BUCKET_NAME: "sean-seungeon-kim.com"
+  AWS_REGION: "us-east-1"
 permissions: # Use OIDC to authenticate with AWS(IAM Role, STS)
   id-token: write
 jobs:
@@ -19,7 +22,8 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::434313666842:role/sean-seungeon-kim.com-role
-          aws-region: us-east-1
+          aws-region: ${{ env.AWS_REGION }}
+      - run : echo "env variables - ${{ env.AWS_REGION }}"
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
