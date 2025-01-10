@@ -85,3 +85,7 @@ In order to update S3 objects, the workflow needs to be authenticated. Github re
 Thanks to OIDC, we don't have to store AWS credentials as long-lived Github secrets. More secure way
 
 I created an IAM Role that Workflow can consume
+
+References:
+- https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services#adding-the-identity-provider-to-aws
+- https://www.youtube.com/watch?v=aOoRaVuh8Lc&ab_channel=CodeMadeSimple
