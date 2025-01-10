@@ -3,21 +3,23 @@ name: Upload to S3
 on:
   push:
     branches:
-      - main 
+      - main
+permissions: # Use OIDC to authenticate with AWS(IAM Role, STS)
+  id-token: write
 jobs:
   upload:
     runs-on: ubuntu-latest # can this be changed? would it be faster if we use something lighter?
+
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
       - run: echo "Latest Commit SHA - ${{ github.sha }} "
       - run: echo "Latest Commit Message - ${{ github.event.head_commit.message }}"
-      # - name: Configure AWS Credentials
-      #   uses: aws-actions/configure-aws-credentials@v4
-      #   with:
-      #     aws-region:
-      #     role-to-assume:
-      #     role-
+      - name: Configure AWS Credentials for us-east-1
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::434313666842:role/sean-seungeon-kim.com-role
+          aws-region: us-east-1
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."

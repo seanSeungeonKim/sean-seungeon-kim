@@ -75,3 +75,13 @@ In the first workflow, I added basic steps. Just echoing things! This example sh
 
 ![!My Image](https://docs.github.com/assets/cb-25535/mw-1440/images/help/actions/overview-actions-simple.webp)
 
+
+# Jan 9
+
+## Set up OpenID Connect(OIDC) to authenticate with AWS
+
+In order to update S3 objects, the workflow needs to be authenticated. Github recommends to use OIDC. 
+
+Thanks to OIDC, we don't have to store AWS credentials as long-lived Github secrets. More secure way
+
+I created an IAM Role that Workflow can consume
