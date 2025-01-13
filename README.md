@@ -101,7 +101,6 @@ I first defined a few based on the "Least Previledge Principal".
 
 ### Example IAM Role policy
 
-
 ```json
 {
     "Version": "2012-10-17",
@@ -122,3 +121,7 @@ I first defined a few based on the "Least Previledge Principal".
         }
     ]
 }
+
+After adding policies, I tested if the automation of s3 website upload. I changed heading 1 from '404' to 'Sorry'. After pushing, the sync command worked and the page changed!
+
+![aws-s3-sync-succeess](readme-images/aws-s3-sync.png)
