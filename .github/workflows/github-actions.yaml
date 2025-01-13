@@ -29,7 +29,7 @@ jobs:
       # - name: List current directory 
         # run: ls -RFl
       - name: Sync git directory to S3
-        run: aws s3 sync ./ "s3://${{ env.BUCKET_NAME}}" --delete
+        run: aws s3 sync ./ "s3://${{ env.BUCKET_NAME}}" --delete --exclude ".git/*" --exclude ".github/*"
       
       # - name: Update Files in S3 bucket
         # run: aws s3 sync <localPath> <s3uri> --dryrun --quiet --include <value> -- exclude <value> --delete
