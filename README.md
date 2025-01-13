@@ -127,4 +127,4 @@ After adding policies, I tested if the automation of s3 website upload. I change
 
 ![Alt text](./readme-images/aws-s3-sync.png)
 
-![alt text](./readme-images/sync-example-sorry.png.png)
+![alt text](./readme-images/sync-example-sorry.png)
