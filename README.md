@@ -89,3 +89,36 @@ I created an IAM Role that Workflow can consume
 References:
 - https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services#adding-the-identity-provider-to-aws
 - https://www.youtube.com/watch?v=aOoRaVuh8Lc&ab_channel=CodeMadeSimple
+
+
+# Jan 12
+
+After getting Github athenticated, I needed to grant permission to the role that Github Action assumes.
+
+This is to enable github action to interact with S3 bucket.
+
+I first defined a few based on the "Least Previledge Principal".
+
+### Example IAM Role policy
+
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:ListBucket",
+                "s3:GetObject",
+                "s3:DeleteObject",
+            ],
+            "Resource": [
+                "arn:aws:s3:::sean-seungeon-kim.com/*",
+                "arn:aws:s3:::sean-seungeon-kim.com"
+            ]
+        }
+    ]
+}
