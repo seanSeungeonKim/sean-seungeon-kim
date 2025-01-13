@@ -26,6 +26,9 @@ jobs:
           mask-aws-account-id: true # Do not show sensitive data
       - name: Logging current directory
         run: echo ${{ github.workspace }}
+      - name: List current directory 
+        run: ls -RFl
+      
       # - name: Update Files in S3 bucket
         # run: aws s3 sync <localPath> <s3uri> --dryrun --quiet --include <value> -- exclude <value> --delete
 
