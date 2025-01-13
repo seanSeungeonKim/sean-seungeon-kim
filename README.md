@@ -126,3 +126,5 @@ I first defined a few based on the "Least Previledge Principal".
 After adding policies, I tested if the automation of s3 website upload. I changed heading 1 from '404' to 'Sorry'. After pushing, the sync command worked and the page changed!
 
 ![Alt text](./readme-images/aws-s3-sync.png)
+
+![alt text](./readme-images/sync-example-sorry.png.png)
