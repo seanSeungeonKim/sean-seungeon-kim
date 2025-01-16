@@ -8,8 +8,107 @@
     <meta property="twitter:card" content="summary_large_image" />
 
     <style data-tag="reset-style-sheet">
-      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 300vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+      html {
+        line-height: 1.15;
+      }
+      body {
+        margin: 0;
+      }
+      * {
+        box-sizing: border-box;
+        border-width: 0;
+        border-style: solid;
+        -webkit-font-smoothing: antialiased;
+      }
+      p,
+      li,
+      ul,
+      pre,
+      div,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      figure,
+      blockquote,
+      figcaption {
+        margin: 0;
+        padding: 0;
+      }
+      button {
+        background-color: transparent;
+      }
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        font-family: inherit;
+        font-size: 100%;
+        line-height: 1.15;
+        margin: 0;
+      }
+      button,
+      select {
+        text-transform: none;
+      }
+      button,
+      [type="button"],
+      [type="reset"],
+      [type="submit"] {
+        -webkit-appearance: button;
+        color: inherit;
+      }
+      button::-moz-focus-inner,
+      [type="button"]::-moz-focus-inner,
+      [type="reset"]::-moz-focus-inner,
+      [type="submit"]::-moz-focus-inner {
+        border-style: none;
+        padding: 0;
+      }
+      button:-moz-focus,
+      [type="button"]:-moz-focus,
+      [type="reset"]:-moz-focus,
+      [type="submit"]:-moz-focus {
+        outline: 1px dotted ButtonText;
+      }
+      a {
+        color: inherit;
+        text-decoration: inherit;
+      }
+      input {
+        padding: 2px 4px;
+      }
+      img {
+        display: block;
+      }
+      details {
+        display: block;
+        margin: 0;
+        padding: 0;
+      }
+      summary::-webkit-details-marker {
+        display: none;
+      }
+      [data-thq="accordion"] [data-thq="accordion-content"] {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+        padding: 0;
+      }
+      [data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {
+        max-height: 300vh;
+      }
+      details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {
+        transform: rotate(180deg);
+      }
+      html {
+        scroll-behavior: smooth;
+      }
     </style>
+
     <style data-tag="default-style-sheet">
       html {
         font-family: Inter;
@@ -18,84 +117,139 @@
 
       body {
         font-weight: 400;
-        font-style:normal;
+        font-style: normal;
         text-decoration: none;
         text-transform: none;
         letter-spacing: normal;
         line-height: 1.15;
         color: var(--dl-color-theme-neutral-dark);
         background: var(--dl-color-theme-neutral-light);
-
         fill: var(--dl-color-theme-neutral-dark);
       }
+
+      :root {
+        --dl-size-size-large: 144px;
+        --dl-size-size-small: 48px;
+        --dl-size-size-medium: 96px;
+        --dl-size-size-xlarge: 192px;
+        --dl-size-size-xsmall: 16px;
+        --dl-space-space-unit: 16px;
+        --dl-size-size-xxlarge: 288px;
+        --dl-size-size-maxwidth: 1400px;
+        --dl-color-theme-accent1: #ffffff;
+        --dl-color-theme-accent2: #f5d1b0;
+        --dl-radius-radius-round: 50%;
+        --dl-color-theme-primary1: #bf4408;
+        --dl-color-theme-primary2: #e65103;
+        --dl-space-space-halfunit: 8px;
+        --dl-space-space-sixunits: 96px;
+        --dl-space-space-twounits: 32px;
+        --dl-radius-radius-radius2: 2px;
+        --dl-radius-radius-radius4: 4px;
+        --dl-radius-radius-radius8: 8px;
+        --dl-space-space-fiveunits: 80px;
+        --dl-space-space-fourunits: 64px;
+        --dl-color-theme-secondary1: #ffffff;
+        --dl-color-theme-secondary2: #fbf1eb;
+        --dl-space-space-threeunits: 48px;
+        --dl-color-theme-neutral-dark: #191818;
+        --dl-radius-radius-cardradius: 8px;
+        --dl-color-theme-neutral-light: #fbfaf9;
+        --dl-radius-radius-imageradius: 8px;
+        --dl-radius-radius-inputradius: 24px;
+        --dl-radius-radius-buttonradius: 24px;
+        --dl-space-space-oneandhalfunits: 24px;
+      }
+
+      .not-found3-wrapper {
+        display: contents;
+      }
+
+      .not-found3-container {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        position: relative;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .not-found3-max-width {
+        gap: var(--dl-space-space-oneandhalfunits);
+        display: flex;
+        max-width: 600px;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .not-found3-text1 {
+        font-size: 100px;
+        text-align: center;
+      }
+
+      .not-found3-text2 {
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .not-found3-text3 {
+        text-align: center;
+      }
+
+      @media (max-width: 767px) {
+        .not-found3-max-width {
+          align-items: center;
+          padding-left: var(--dl-space-space-threeunits);
+          padding-right: var(--dl-space-space-threeunits);
+        }
+        .not-found3-text3 {
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 479px) {
+        .not-found3-max-width {
+          padding-left: var(--dl-space-space-oneandhalfunits);
+          padding-right: var(--dl-space-space-oneandhalfunits);
+        }
+      }
+
+      .home-container {
+        width: 100%;
+        display: flex;
+        min-height: 100vh;
+        align-items: center;
+        flex-direction: column;
+      }
     </style>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/animate.css@4.1.1/animate.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
-    />
   </head>
   <body>
-    <link rel="stylesheet" href="./style.css" />
-    <div>
-      <link href="./404.css" rel="stylesheet" />
-
-      <div class="home-container">
-        <not-found3-wrapper
-          class="not-found3-wrapper"
-          rootclassname="not-found3undefined"
+    <div class="home-container">
+      <not-found3-wrapper
+        class="not-found3-wrapper"
+        rootclassname="not-found3undefined"
+      >
+        <div
+          class="not-found3-container thq-section-padding not-found3root-class-name"
         >
-          <!--NotFound3 component-->
-          <div
-            class="not-found3-container thq-section-padding not-found3root-class-name"
-          >
-            <div class="not-found3-max-width">
-              <h1 class="not-found3-text1 thq-heading-1">404</h1>
-              <h2 class="not-found3-text2 thq-heading-2">Site is currently under construction</h2>
-              <span class="not-found3-text3 thq-body-small">
-                <fragment class="home-fragment1">
-                  <span class="home-text1">
-                    <span>
-                      Oops! Looks like Sean is working to build this page.
-                    </span>
-                    <br />
-                    <span>One day this page will turn into 200-Success!</span>
-                    <br />
-                  </span>
-                </fragment>
+          <div class="not-found3-max-width">
+            <h1 class="not-found3-text1 thq-heading-1">404</h1>
+            <h2 class="not-found3-text2 thq-heading-2">
+              Site is currently under construction
+            </h2>
+            <span class="not-found3-text3 thq-body-small">
+              <span class="home-text1">
+                <span>Oops! Looks like Sean is working to build this page.</span>
+                <br />
+                <span>One day this page will turn into 200-Success!</span>
+                <br />
               </span>
-<!--               <button class="thq-button-filled">
-                <span class="thq-body-small">
-                  <fragment class="home-fragment2">
-                    <span class="home-text6">
-                      You can return to the homepage or contact us for further
-                      assistance.
-                    </span>
-                  </fragment>
-                </span>
-              </button> -->
-            </div>
+            </span>
           </div>
-        </not-found3-wrapper>
-      </div>
+        </div>
+      </not-found3-wrapper>
     </div>
   </body>
 </html>
