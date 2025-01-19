@@ -42,7 +42,7 @@ align: "center"
 - **Microservice**: SQS, RabbitMQ, Docker, Kubernetes
 - **Monitoring**
   - Splunk, Grafana/Prometheus, CloudWatch
-- Programming Language
+- **Programming Language**
   - Typescript, Python, Shell Script
 - **Automation, IaaC, CI/CD**
   - Terraform, Github Actions, Jenkins, Helm

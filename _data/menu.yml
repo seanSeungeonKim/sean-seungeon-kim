@@ -5,6 +5,6 @@ main:
   # - name: Experience
   #   url: /experience/
   #   weight: 2
-  - name: Blogs
-    url: /blogs/
-    weight: 2
+  # - name: Blogs
+  #   url: /blogs/
+  #   weight: 2
