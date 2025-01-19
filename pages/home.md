@@ -24,14 +24,14 @@ lead:
   #     external: true
   #     dot: "#46e385" # you can use any color
 
-work:
-  enabled: true
-  heading: "Featured Work"
-  description: "A collection of my projects, articles, notes, podcasts, talks and more"
-  show_view_all: false
-  limit: 12
-  sort_by: "date" # "date", "weight"
-  columns: 3
+# work:
+#   enabled: true
+#   heading: "Featured Work"
+#   description: "A collection of my projects, articles, notes, podcasts, talks and more"
+#   show_view_all: false
+#   limit: 12
+#   sort_by: "date" # "date", "weight"
+#   columns: 3
 
 # cta:
 #   enabled: true
