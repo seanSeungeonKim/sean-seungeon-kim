@@ -37,8 +37,7 @@ align: "center"
 
 ## 🔨Skills & 🤖Technologies
 
-- **Cloud**
-  - **AWS** - S3, CloudWatch, SNS, Lambda, RDS, DynamoDB, DocumentDB, IAM, VPC(Subnet, Route Table), Database Migration Service
+- **AWS** - S3, CloudWatch, SNS, Lambda, RDS, DynamoDB, DocumentDB, IAM, VPC(Subnet, Route Table), Database Migration Service
 - **Microservice** -  SQS, RabbitMQ, Docker, Kubernetes
 - **Monitoring** - Splunk, Grafana/Prometheus, CloudWatch
 - **Programming Language** - Typescript, Python, Shell Script
