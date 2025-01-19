@@ -8,5 +8,10 @@
     "title": "LinkedIn",
     "fa_icon": "fab fa-linkedin",
     "url": "https://www.linkedin.com/in/sean-k-98180618a/"
+  },
+  {
+    "title": "Resume",
+    "fa_icon": "fa fa-file-pdf",
+    "url": "/resume_sean_kim.pdf"
   }
 ]
