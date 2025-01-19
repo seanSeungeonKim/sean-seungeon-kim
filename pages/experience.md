@@ -41,7 +41,7 @@ meta_title: Experience
 
 - **AWS** - S3, CloudWatch, SNS, Lambda, RDS, DynamoDB, DocumentDB, IAM, VPC(Subnet, Route Table), Database Migration Service
 - **Microservice** -  SQS, RabbitMQ, Docker, Kubernetes
-- **Monitoring** - Splunk, Grafana/Prometheus, CloudWatch
+- **Monitoring** - Splunk, Grafana/Prometheus
 - **Programming Language** - Typescript, Python, Shell Script
 - **Automation, IaaC, CI/CD** - Terraform, Github Actions, Jenkins, Helm
 - **OS** - Linux(Debian, Ubuntu), MacOS

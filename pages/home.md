@@ -4,7 +4,7 @@ permalink: "/"
 title: "Sean Kim"
 description: "This is Sean's website"
 
-meta_description: ""
+# meta_description: ""
 meta_title: Sean Kim
 
 lead:
