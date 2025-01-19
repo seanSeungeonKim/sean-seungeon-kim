@@ -135,3 +135,40 @@ After adding policies, I tested if the automation of s3 website upload. I change
 ![Alt text](./readme-images/aws-s3-sync.png)
 
 ![alt text](./readme-images/sync-example-sorry.png)
+
+
+# Jan 18
+
+I used `CloudFront Function` to fix path-not-found issue in S3.
+
+Rendered Jekyll requests contains href that looks like this
+
+```
+        <li class=" ">
+          <a href="/experience" >Experience</a>
+        </li>
+```
+
+This path does not work in S3. It is because It is requesting to get /experience, not /experience/index.html. The key path is strict.
+
+In order to fix it, I referenced AWS documentation explaining how to make the url overwrite possible by using CloudFront.
+
+Example CF Function in `Viewer Request` in CF Behavior
+
+```javascript
+async function handler(event) {
+    var request = event.request;
+    var uri = request.uri;
+    
+    // Check whether the URI is missing a file name.
+    if (uri.endsWith('/')) {
+        request.uri += 'index.html';
+    } 
+    // Check whether the URI is missing a file extension.
+    else if (!uri.includes('.')) {
+        request.uri += '/index.html';
+    }
+
+    return request;
+}
+```
