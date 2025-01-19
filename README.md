@@ -172,3 +172,5 @@ async function handler(event) {
     return request;
 }
 ```
+
+Used emojis in my website! I pasted them on emoji generator site: https://emojipedia.org/

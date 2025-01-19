@@ -8,13 +8,13 @@ image: "assets/images/photos/aboutme.jpg"
 align: "center"
 ---
 
-## Software Engineer
+# Software Engineer
 
 **Qualtrics**  
 **Virginia, Reston**  
 *Aug/2022 – Present*  
 
-### What Have I Done?
+## 💻🧑‍💼 What Have I Done? 🧑💻
 
 - I focus on developement and maintanence of ETL applications running on Cloud environments
 - I design and develop microservice applications and manage them on Kubernetes
@@ -23,7 +23,7 @@ align: "center"
 
 ---
 
-## Certifications
+## 🏅Certifications🏅
 
 - AWS Solutions Architect Associate
 - AWS Developer Associate
@@ -35,36 +35,20 @@ align: "center"
 
 ---
 
-## Skills & Technologies
+## 🔨Skills & 🤖Technologies
 
-- Cloud
-  - AWS
-    - S3
-    - CloudWatch
-    - SNS
-    - Lambda
-    - RDS
-    - DynamoDB
-    - DocumentDB
-    - IAM
-    - VPC, Subnet
-    - Database Migration Service
-- [Microservice]
-  - SQS
-  - RabbitMQ
-- [Monitoring]
-  - Splunk
-  - Grafana/Prometheus
-  - CloudWatch
-- [Containerization]
-  - Docker, Kubernetes, Helm
-- [Programming Language]
+- **Cloud**
+  - **AWS** - S3, CloudWatch, SNS, Lambda, RDS, DynamoDB, DocumentDB, IAM, VPC(Subnet, Route Table), Database Migration Service
+- **Microservice**: SQS, RabbitMQ, Docker, Kubernetes
+- **Monitoring**
+  - Splunk, Grafana/Prometheus, CloudWatch
+- Programming Language
   - Typescript, Python, Shell Script
-- [Automation, IaaC, CI/CD]
-  - Terraform, Github Actions, Jenkins
-- [OS]
+- **Automation, IaaC, CI/CD**
+  - Terraform, Github Actions, Jenkins, Helm
+- **OS**
   - Linux(Debian, Ubuntu), MacOS
-- [ETC]
+- **ETC**
   - Git, Vim, VSCode
 
 ---
