@@ -10,9 +10,8 @@ meta_title: Experience
 
 ---
 
-# Software Engineer
+# Qualtrics - Software Engineer
 
-**Qualtrics**  
 **Virginia, Reston**  
 *Aug/2022 – Present*  
 
