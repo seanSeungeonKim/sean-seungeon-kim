@@ -11,48 +11,49 @@ align: "center"
 # Work Experience
 
 ## [Software Engineer]  
+
 **Qualtrics**  
 **Virginia, Reston**  
 *Aug/2022 – Present*  
 
 ### Responsibilities
-- [Responsibility 1: Describe your key responsibility or task in this role.]
-- [Responsibility 2: Focus on impact and outcomes.]
+
+- I focus on developement and maintanence of ETL applications running on Cloud environments
 - [Responsibility 3: Highlight relevant skills or technologies used.]
 
 ### Achievements
+
 - [Achievement 1: Quantify your results whenever possible (e.g., increased efficiency by 30%).]
 - [Achievement 2: Show measurable improvements or successful projects.]
 - [Achievement 3: Emphasize problem-solving, leadership, or innovation.]
 
 ---
 
-## [Job Title]  
-**Company Name**  
-**Location**  
-*Start Date – End Date*
+---
 
-### Responsibilities
-- [Responsibility 1]
-- [Responsibility 2]
-- [Responsibility 3]
+## Certifications
 
-### Achievements
-- [Achievement 1]
-- [Achievement 2]
-- [Achievement 3]
+- AWS Solutions Architect Associate
+- AWS Developer Associate
+- Certified Kubernetes Application Developer(CKAD)
+
+---
 
 ---
 
 ## Skills & Technologies
-- [Skill 1]
-- [Skill 2]
-- [Skill 3]
-- [Technologies you used across roles, e.g., AWS, Kubernetes, Python, etc.]
+
+- [Containerization]
+  - Docker, Kubernetes, Helm
+- [Programming Language]
+  - Javascript, Python, Shell Script
+- [Automation, CI/CD]
+  - Github Actions, Jenkins
 
 ---
 
 ### Notes
+
 - Tailor this section for every job application.
 - Use active language (e.g., "Improved," "Designed," "Developed").
 - Highlight accomplishments relevant to the job you're applying for.
