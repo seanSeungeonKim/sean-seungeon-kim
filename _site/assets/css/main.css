@@ -27,7 +27,7 @@
 }
 
 html[data-bs-theme=dark] {
-  --color-primary-bg: #46e385;
+  --color-primary-bg: #ffffff;
   --color-primary-bg-2: #55f884;
   --color-primary-bg-3: #46e385;
   --color-primary-text: #114c29;
