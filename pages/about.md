@@ -8,21 +8,18 @@ image: "assets/images/photos/aboutme.jpg"
 align: "center"
 ---
 
-# Work Experience
-
-## [Software Engineer]  
+## Software Engineer
 
 **Qualtrics**  
 **Virginia, Reston**  
 *Aug/2022 – Present*  
 
-### Responsibilities
+### What Have I Done?
 
 - I focus on developement and maintanence of ETL applications running on Cloud environments
 - I design and develop microservice applications and manage them on Kubernetes
 - I automate the manaul works and design optimal and efficient CI/CD pipeline using Jenkins
-
----
+- I try to identify problems and come up with a solution
 
 ---
 
@@ -38,11 +35,9 @@ align: "center"
 
 ---
 
----
-
 ## Skills & Technologies
 
-- [Cloud]
+- Cloud
   - AWS
     - S3
     - CloudWatch
