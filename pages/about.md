@@ -19,13 +19,8 @@ align: "center"
 ### Responsibilities
 
 - I focus on developement and maintanence of ETL applications running on Cloud environments
-- [Responsibility 3: Highlight relevant skills or technologies used.]
-
-### Achievements
-
-- [Achievement 1: Quantify your results whenever possible (e.g., increased efficiency by 30%).]
-- [Achievement 2: Show measurable improvements or successful projects.]
-- [Achievement 3: Emphasize problem-solving, leadership, or innovation.]
+- I design and develop microservice applications and manage them on Kubernetes
+- I automate the manaul works and design optimal and efficient CI/CD pipeline using Jenkins
 
 ---
 
@@ -37,26 +32,47 @@ align: "center"
 - AWS Developer Associate
 - Certified Kubernetes Application Developer(CKAD)
 
+![AWS Solutions Architect Associate](/assets/images/certifications/aws-solutions-architect-associate.png)
+![AWS Developer Associate](/assets/images/certifications/aws-developer-associate.png)
+![Certified Kubernetes Application Developer (CKAD)](/assets/images/certifications/ckad.png)
+
 ---
 
 ---
 
 ## Skills & Technologies
 
+- [Cloud]
+  - AWS
+    - S3
+    - CloudWatch
+    - SNS
+    - Lambda
+    - RDS
+    - DynamoDB
+    - DocumentDB
+    - IAM
+    - VPC, Subnet
+    - Database Migration Service
+- [Microservice]
+  - SQS
+  - RabbitMQ
+- [Monitoring]
+  - Splunk
+  - Grafana/Prometheus
+  - CloudWatch
 - [Containerization]
   - Docker, Kubernetes, Helm
 - [Programming Language]
-  - Javascript, Python, Shell Script
-- [Automation, CI/CD]
-  - Github Actions, Jenkins
+  - Typescript, Python, Shell Script
+- [Automation, IaaC, CI/CD]
+  - Terraform, Github Actions, Jenkins
+- [OS]
+  - Linux(Debian, Ubuntu), MacOS
+- [ETC]
+  - Git, Vim, VSCode
 
 ---
-
-### Notes
-
-- Tailor this section for every job application.
-- Use active language (e.g., "Improved," "Designed," "Developed").
-- Highlight accomplishments relevant to the job you're applying for.
 
 
 
