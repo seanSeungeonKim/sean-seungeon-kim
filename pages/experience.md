@@ -6,6 +6,8 @@ permalink: "/experience/"
 # description: "Little Bit About Me"
 image: "assets/images/photos/aboutme.jpg"
 align: "center"
+meta_title: Experience
+
 ---
 
 # Software Engineer

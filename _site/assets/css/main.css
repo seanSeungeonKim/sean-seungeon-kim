@@ -28,7 +28,7 @@
 
 html[data-bs-theme=dark] {
   --color-primary-bg: #ffffff;
-  --color-primary-bg-2: #55f884;
+  --color-primary-bg-2: #ffffff;
   --color-primary-bg-3: #46e385;
   --color-primary-text: #0b0b0b;
   --color-base-bg: #0b0b0b;
