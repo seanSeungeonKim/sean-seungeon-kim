@@ -14,7 +14,7 @@ align: "center"
 **Virginia, Reston**  
 *Aug/2022 – Present*  
 
-## 💻🧑‍💼 What Have I Done? 🧑💻
+## 💻🧑‍💼 What Do I Do? 🧑💻
 
 - I focus on developement and maintanence of ETL applications running on Cloud environments
 - I design and develop microservice applications and manage them on Kubernetes
