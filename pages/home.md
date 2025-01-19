@@ -14,9 +14,9 @@ lead:
   show_social_media_icons: true
   avatar:
     avatar_image: "assets/images/avatar/sean-profile.jpg"
-    avatar_image_height: "500px"
-    avatar_image_width: "480px"
-    # alt: "James Mckinner"
+    avatar_image_height: "320px"
+    avatar_image_width: "300px"
+    alt: "James Mckinner"
   # buttons: 
   #   - button: 
   #     url: "https://calendly.com/zerostatic"
