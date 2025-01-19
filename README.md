@@ -151,7 +151,7 @@ Rendered Jekyll requests contains href that looks like this
 
 This path does not work in S3. It is because It is requesting to get /experience, not /experience/index.html. The key path is strict.
 
-In order to fix it, I referenced AWS documentation explaining how to make the url overwrite possible by using CloudFront.
+In order to fix it, I referenced AWS documentation explaining how to make the url overwrite possible by using CloudFront. REF: https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/example_cloudfront_functions_url_rewrite_single_page_apps_section.html
 
 Example CF Function in `Viewer Request` in CF Behavior
 
