@@ -16,9 +16,9 @@ align: "center"
 
 ## 💻🧑‍💼 What Do I Do? 🧑💻
 
-- I focus on developement and maintanence of ETL applications running on Cloud environments
+- I focus on development and maintanence of ETL applications running on Cloud environments
 - I design and develop microservice applications and manage them on Kubernetes
-- I automate the manaul works and design optimal and efficient CI/CD pipeline using Jenkins
+- I automate the manual works and design optimal and efficient CI/CD pipeline using Jenkins
 - I try to identify problems and come up with a solution
 
 ---
