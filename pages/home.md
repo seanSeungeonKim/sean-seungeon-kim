@@ -33,15 +33,12 @@ lead:
 #   sort_by: "date" # "date", "weight"
 #   columns: 3
 
-# cta:
-#   enabled: true
-#   heading: "Kickstart your Jekyll website"
-#   description: "Get your own portfolio up and running in hours with our premium template."
-#   email: james@domain.com
-#   phone: "+61 048 711 800"
-#   buttons:
-#   - button: 
-#     url: "https://www.zerostatic.io/theme/jekyll-lever/"
-#     text: "Buy theme"
-#     external: true
+cta:
+  enabled: true
+  heading: "My Website Is On AWS Cloud"
+  description: ""
+  awsImages: 
+  - "assets/images/photos/Route\ 53.png"
+  - "assets/images/photos/CloudFront.png"
+  - "assets/images/photos/Simple\ Storage\ Service.png"
 ---

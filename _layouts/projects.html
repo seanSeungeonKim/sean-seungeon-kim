@@ -126,13 +126,6 @@ body_classes: page-home
             <a class="cta-phone" href="{{ phone }}">{{ page.cta.phone }}</a>
           </div>
 
-          {% if page.cta.awsImages %}
-          <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
-            {% for image in page.cta.awsImages %}
-            <img style="width: 125px; height: 125px; object-fit: cover;" src="{{ image | relative_url }}">
-            {% endfor %}
-          </div>
-          {% endif %}
         </div>
       </div>
     </div>

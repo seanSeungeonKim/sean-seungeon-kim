@@ -5,16 +5,16 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
 
-    <title>Branding - Jekyll Lever</title>
+    <title>Automate My Website Deployment with CI/CD - Jekyll Lever</title>
 
 
 
 
     <meta property="og:type" content="website"/>
-<meta property="og:url" content="/category/branding/"/>
+<meta property="og:url" content="/work/automate-my-website-deployment-wich-cicd/"/>
 
 
-  <meta property="og:title" content="Branding"/>
+  <meta property="og:title" content="Automate My Website Deployment with CI/CD"/>
 
 
 
@@ -48,7 +48,7 @@
     
 
   </head>
-<body class="page page-category has-static-header">
+<body class="page page-work has-static-header">
 
 
 <div class="menu-main-mobile " id="menu-main-mobile">
@@ -248,40 +248,52 @@
 <div id="wrapper" class="wrapper">     
   <div class="section">
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12 col-lg-8">
-        
-
-
-
-
-
-
-
-
-
-<div class="heading heading-left">
-  
-  
-  
-  <div class="heading-heading">
-    <h1>Branding</h1>
-  </div>
-  
-  
-  
-
-  
-</div>
+    <div class="row justify-content-center align-items-center">
+      <div class="col-12 col-md-10 ">
+        <div class="intro">
+          
+          
+          <h1>Automate My Website Deployment with CI/CD</h1>
+          
+          
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="section pt-0">
+
+<div class="section">
   <div class="container">
-    
-    
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+        <div class="content"><h1 id="project-intro">Project Intro</h1>
+
+<p>I used Github Action to deploy automatically any changes of static files in S3. All you have to do is just push codes!</p>
+
+<hr />
+<h2 id="project-duration">Project Duration</h2>
+
+<p>December 2024 ~ Jan 2025</p>
+
+<hr />
+<h2 id="project-details">Project Details</h2>
+
+<p>The following pipeline runs when a new code was pushed to main.</p>
+
+<ol>
+  <li>Github Action checks out the latest commit hash and description</li>
+  <li>Using official aws-provided action, Authenticate to AWS Account. Github Action assumes IAM role to have minimum policy while interacting with S3.</li>
+  <li>Using S3 API, Sync current files to S3 bucket. If any file is deleted from the repo, delete it on S3 as well.</li>
+</ol>
+
+<h3 id="things-to-add">Things to add</h3>
+<ul>
+  <li>How to make it more efficient to choose what file to exclude during <code class="language-plaintext highlighter-rouge">S3 Sync</code>. Right now I have to manually add <code class="language-plaintext highlighter-rouge">--exclude=""</code> option</li>
+</ul>
+</div>
+      </div>
+    </div>
   </div>
 </div>
 
