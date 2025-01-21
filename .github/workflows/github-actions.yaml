@@ -28,7 +28,7 @@ jobs:
       - name: Generate Exclusions
         id: exclusions
         env:
-          EXCLUDE_FILE_PATH: ".github/workflows/generate-s3-exclude/generate-s3-exclude/exclude.txt"
+          EXCLUDE_FILE_PATH: ".github/workflows/generate-s3-exclude/exclude.txt"
         run: |
           # chmod +x ${{ env.EXCLUDE_FILE_PATH }} && EXCLUDE_ARGS=$(${{ env.EXCLUDE_FILE_PATH }})
           EXCLUDE_ARGS=""
