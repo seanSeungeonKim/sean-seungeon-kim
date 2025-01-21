@@ -3,9 +3,9 @@ title: "Automate My Website Deployment with CI/CD"
 # description: "Date: Dec 2024 ~ Jan 2025"
 date: 2025-01-20T00:00:00+10:00
 categories: ["Github Actions"]
-icon: "assets/images/icons/icons8-signature-50.png"
+icon: "/assets/images/photos/automate-s3-deployment/github-s3.png"
 ---
-
+![Alt text](/assets/images/photos/automate-s3-deployment/github-s3.png)
 
 # Project Intro
 
