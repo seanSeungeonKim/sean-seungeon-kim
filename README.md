@@ -174,3 +174,14 @@ async function handler(event) {
 ```
 
 Used emojis in my website! I pasted them on emoji generator site: https://emojipedia.org/
+
+
+# Jan 20
+After getting the redirection working, I started adding another feature. 
+
+## Sending Contact Imformation to Email
+
+AWS Services I Used:
+- API Gateway
+- AWS Lambda
+- Amazon SES(Simple Email Service)
