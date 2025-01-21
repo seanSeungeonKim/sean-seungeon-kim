@@ -26,11 +26,12 @@ jobs:
       - name: Generate Exclusions
         id: exclusions
         run: |
-          pwd
-          ls -aF
+          # pwd
+          # ls -aF
           env
-          chmod +x ./generate-s3-exclude/generate-s3-exclude.sh
-          EXCLUDE_ARGS=$(./generate_exclusions.sh)
+          exclue_file_path=".github/workflows/generate-s3-exclude/generate-s3-exclude.sh"
+          chmod +x $exclude_file_path
+          EXCLUDE_ARGS=$($exclude_file_path)
           echo "exclude_args=${EXCLUDE_ARGS}" >> $GITHUB_ENV
           echo "echo $EXCLUDE_ARGS"
       - name: Sync git directory to S3
