@@ -48,14 +48,13 @@ jobs:
           done < "${{ env.EXCLUDE_FILE_PATH}}"
 
           # Output the exclude arguments
+          echo "echo '$EXCLUDE_ARGS'"
           echo "$EXCLUDE_ARGS"
 
           echo "EXCLUDE_ARGS=${EXCLUDE_ARGS}" >> $GITHUB_ENV
-          echo "echo $GITHUB_ENV"
           
       - name: Sync website files to S3
         run: |
-          echo "echoing ${{env.EXCLUDE_ARGS}}"
           aws s3 sync ./_site/ "s3://${{ env.BUCKET_NAME }}" \
             --delete \
             ${{ env.EXCLUDE_ARGS }}
