@@ -108,7 +108,7 @@ fonts:
   logo: "Inter"
 
 logo:
-  logo_text: "Sean"
+  logo_text: "Sean Kim"
   # logo_image: assets/images/logo/logo.svg
   logo_image_mobile: assets/images/logo/logo-mobile.svg
   logo_image_invert: assets/images/logo/logo-invert.svg

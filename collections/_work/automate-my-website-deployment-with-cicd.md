@@ -1,15 +1,22 @@
 ---
 title: "Automate My Website Deployment with CI/CD"
-# description: "Date: Dec 2024 ~ Jan 2025"
+# description: "https://github.com/seanSeungeonKim/sean-seungeon-kim"
 date: 2025-01-20T00:00:00+10:00
 categories: ["Github Actions"]
 icon: "/assets/images/photos/automate-s3-deployment/github-s3.png"
+permalink: /project/automate-s3-deployment/
 ---
+
+
+
+
 ![Alt text](/assets/images/photos/automate-s3-deployment/github-s3.png)
 
 # Project Intro
 
 I used Github Action to deploy automatically any changes of static files in S3. All you have to do is just push codes!
+
+Repo: [https://github.com/seanSeungeonKim/sean-seungeon-kim](https://github.com/seanSeungeonKim/sean-seungeon-kim)
 
 ---
 ## Project Duration

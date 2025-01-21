@@ -24,24 +24,6 @@ jobs:
           role-to-assume: arn:aws:iam::434313666842:role/sean-seungeon-kim.com-role
           aws-region: ${{ env.AWS_REGION }}
           mask-aws-account-id: true # Do not show sensitive data
-      # - name: Logging current directory
-        # run: echo ${{ github.workspace }}
-      # - name: List current directory 
-        # run: ls -RFl
       - name: Sync git directory to S3
         run: aws s3 sync ./_site/ "s3://${{ env.BUCKET_NAME}}" --delete --exclude ".git/*" --exclude ".github/*" --exclude "README.md"
-      
-      # - name: Update Files in S3 bucket
-        # run: aws s3 sync <localPath> <s3uri> --dryrun --quiet --include <value> -- exclude <value> --delete
-
-      # - run : echo "env variables - ${{ env.AWS_REGION }}"
-      # - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      # - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      # - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-      # - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      # - run: echo "🖥️ The workflow is now ready to test your code on the runner."
-      # - name: List files in the repository
-      #   run: |
-      #     ls ${{ github.workspace }}
-      # - run: echo "🍏 This job's status is ${{ job.status }}."
 
