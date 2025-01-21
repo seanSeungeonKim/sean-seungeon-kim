@@ -10,9 +10,8 @@ env:
 permissions: # Use OIDC to authenticate with AWS(IAM Role, STS)
   id-token: write
 jobs:
-  upload:
+  sync-s3:
     runs-on: ubuntu-latest # can this be changed? would it be faster if we use something lighter?
-
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
@@ -24,6 +23,17 @@ jobs:
           role-to-assume: arn:aws:iam::434313666842:role/sean-seungeon-kim.com-role
           aws-region: ${{ env.AWS_REGION }}
           mask-aws-account-id: true # Do not show sensitive data
+      - name: Generate Exclusions
+        id: exclusions
+        run: |
+          chmod +x ./generate-s3-exclude.sh
+          EXCLUDE_ARGS=$(./generate_exclusions.sh)
+          echo "exclude_args=${EXCLUDE_ARGS}" >> $GITHUB_ENV
+          echo "echo $EXCLUDE_ARGS"
       - name: Sync git directory to S3
-        run: aws s3 sync ./_site/ "s3://${{ env.BUCKET_NAME}}" --delete --exclude ".git/*" --exclude ".github/*" --exclude "README.md"
+        run: aws s3 sync ./_site/ "s3://${{ env.BUCKET_NAME }}" \
+          --delete \
+          # --exclude ".git/*" \
+          # --exclude ".github/*" \
+          # --exclude "README.md"
 
