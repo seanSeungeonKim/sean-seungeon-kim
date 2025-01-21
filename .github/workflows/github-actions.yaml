@@ -33,11 +33,11 @@ jobs:
           chmod +x ${{ env.EXCLUDE_FILE_PATH }} && EXCLUDE_ARGS=$(${{ env.EXCLUDE_FILE_PATH }})
           echo "EXCLUDE_ARGS=${EXCLUDE_ARGS}" >> $GITHUB_ENV
           echo "echo $GITHUB_ENV"
-          echo "echoing env.EXCLUDE_ARGS"
+          
       - name: Sync website files to S3
-        run: aws s3 sync ./_site/ "s3://${{ env.BUCKET_NAME }}" \
-          --delete \
-          # --exclude ".git/*" \
-          # --exclude ".github/*" \
-          # --exclude "README.md"
+        run: |
+          echo "echoing ${{env.EXCLUDE_ARGS}}"
+          aws s3 sync ./_site/ "s3://${{ env.BUCKET_NAME }}" \
+            --delete \
+            ${{ env.EXCLUDE_ARGS }}
 
