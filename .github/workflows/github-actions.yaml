@@ -30,6 +30,7 @@ jobs:
           chmod +x ${{ env.EXCLUDE_FILE_PATH }} && EXCLUDE_ARGS=$(${{ env.EXCLUDE_FILE_PATH }})
           echo "exclude_args=${EXCLUDE_ARGS}" >> $GITHUB_ENV
           echo "echo $GITHUB_ENV"
+          echo "echoing env.exclude_args"
       - name: Sync git directory to S3
         run: aws s3 sync ./_site/ "s3://${{ env.BUCKET_NAME }}" \
           --delete \
