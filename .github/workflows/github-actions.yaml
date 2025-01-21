@@ -28,9 +28,9 @@ jobs:
         run: |
           # pwd
           # ls -aF
-          env
+          # env
           exclue_file_path=".github/workflows/generate-s3-exclude/generate-s3-exclude.sh"
-          chmod +x $exclude_file_path
+          chmod +x "$exclude_file_path"
           EXCLUDE_ARGS=$($exclude_file_path)
           echo "exclude_args=${EXCLUDE_ARGS}" >> $GITHUB_ENV
           echo "echo $EXCLUDE_ARGS"
