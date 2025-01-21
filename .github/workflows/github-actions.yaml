@@ -26,6 +26,7 @@ jobs:
       - name: Generate Exclusions
         id: exclusions
         run: |
+          echo $GITHUB_ACTION_PATH
           chmod +x ./generate-s3-exclude/generate-s3-exclude.sh
           EXCLUDE_ARGS=$(./generate_exclusions.sh)
           echo "exclude_args=${EXCLUDE_ARGS}" >> $GITHUB_ENV
