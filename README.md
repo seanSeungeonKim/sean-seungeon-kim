@@ -206,18 +206,37 @@ echo "EXCLUDE_ARGS=${EXCLUDE_ARGS}" >> $GITHUB_ENV
 This is how it looks at a bigger picture
 ```yaml
 
-      - name: Generate Exclusions
+- name: Generate Exclude List
         id: exclusions
         env:
-          EXCLUDE_FILE_PATH: ".github/workflows/generate-s3-exclude/generate-s3-exclude.sh"
+          EXCLUDE_FILE_PATH: ".github/workflows/generate-s3-exclude/exclude.txt"
         run: |
-          chmod +x ${{ env.EXCLUDE_FILE_PATH }} && EXCLUDE_ARGS=$(${{ env.EXCLUDE_FILE_PATH }})
+          EXCLUDE_ARGS=""
+
+          # Check if the exclude file exists
+          if [[ ! -f "${{ env.EXCLUDE_FILE_PATH}}" ]]; then
+            echo "Error: Exclude file '${{ env.EXCLUDE_FILE_PATH}}' not found."
+            exit 1
+          fi
+
+          # Read each line from the exclude file
+          while IFS= read -r line || [ -n "$line" ]; do
+            # Skip empty lines or lines that start with a hash (#, used for comments)
+            [[ -z "$line" || "$line" =~ ^# ]] && continue
+
+            # Add the line as a --exclude argument
+            EXCLUDE_ARGS+="--exclude \"$line\" "
+          done < "${{ env.EXCLUDE_FILE_PATH }}"
+
+          # Output the exclude arguments
+          echo "echo EXCLUDE_ARGS"
+          echo "$EXCLUDE_ARGS"
+
           echo "EXCLUDE_ARGS=${EXCLUDE_ARGS}" >> $GITHUB_ENV
-          echo "echo $GITHUB_ENV"
-          
       - name: Sync website files to S3
         run: |
-        echo "echoing ${{env.EXCLUDE_ARGS}}"
-        aws s3 sync ./_site/ "s3://${{ env.BUCKET_NAME }}"  --delete ${{ env.EXCLUDE_ARGS }}
+          aws s3 sync ./_site/ "s3://${{ env.BUCKET_NAME }}" \
+            --delete \
+            ${{ env.EXCLUDE_ARGS }}
 
 ```
