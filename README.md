@@ -185,3 +185,39 @@ AWS Services I Used:
 - API Gateway
 - AWS Lambda
 - Amazon SES(Simple Email Service)
+
+
+# Jan 21
+
+I realized that manually adding `--exclude` option feels very daunting and tedious. I decided to fix this problem
+
+One thing I can think of is to run a shell script to generate a collective list of files to exclude.
+
+1. In a step called `generate exclude list`, a shell script returns a s3 exclude option.
+2. The value of the return value is saved in Github ACtion Env Variabled called `$GITHUB_ENV`
+
+```bash
+echo "EXCLUDE_ARGS=${EXCLUDE_ARGS}" >> $GITHUB_ENV
+```
+
+3. In next step, `Sync website files to S3`, simply use the env variable in `aws s3 sync` command
+
+
+This is how it looks at a bigger picture
+```yaml
+
+      - name: Generate Exclusions
+        id: exclusions
+        env:
+          EXCLUDE_FILE_PATH: ".github/workflows/generate-s3-exclude/generate-s3-exclude.sh"
+        run: |
+          chmod +x ${{ env.EXCLUDE_FILE_PATH }} && EXCLUDE_ARGS=$(${{ env.EXCLUDE_FILE_PATH }})
+          echo "EXCLUDE_ARGS=${EXCLUDE_ARGS}" >> $GITHUB_ENV
+          echo "echo $GITHUB_ENV"
+          
+      - name: Sync website files to S3
+        run: |
+        echo "echoing env.EXCLUDE_ARGS"
+        aws s3 sync ./_site/ "s3://${{ env.BUCKET_NAME }}"  --delete ${{ env.EXCLUDE_ARGS }}
+
+```

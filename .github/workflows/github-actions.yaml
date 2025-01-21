@@ -4,10 +4,11 @@ on:
   push:
     branches:
       - main
+
 env:
   BUCKET_NAME: "sean-seungeon-kim.com"
   AWS_REGION: "us-east-1"
-  EXCLUDE_FILE_PATH: ".github/workflows/generate-s3-exclude/generate-s3-exclude.sh"
+
 permissions: # Use OIDC to authenticate with AWS(IAM Role, STS)
   id-token: write
 jobs:
@@ -26,12 +27,14 @@ jobs:
           mask-aws-account-id: true # Do not show sensitive data
       - name: Generate Exclusions
         id: exclusions
+        env:
+          EXCLUDE_FILE_PATH: ".github/workflows/generate-s3-exclude/generate-s3-exclude.sh"
         run: |
           chmod +x ${{ env.EXCLUDE_FILE_PATH }} && EXCLUDE_ARGS=$(${{ env.EXCLUDE_FILE_PATH }})
-          echo "exclude_args=${EXCLUDE_ARGS}" >> $GITHUB_ENV
+          echo "EXCLUDE_ARGS=${EXCLUDE_ARGS}" >> $GITHUB_ENV
           echo "echo $GITHUB_ENV"
-          echo "echoing env.exclude_args"
-      - name: Sync git directory to S3
+          echo "echoing env.EXCLUDE_ARGS"
+      - name: Sync website files to S3
         run: aws s3 sync ./_site/ "s3://${{ env.BUCKET_NAME }}" \
           --delete \
           # --exclude ".git/*" \
