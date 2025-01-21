@@ -217,7 +217,7 @@ This is how it looks at a bigger picture
           
       - name: Sync website files to S3
         run: |
-        echo "echoing env.EXCLUDE_ARGS"
+        echo "echoing ${{env.EXCLUDE_ARGS}}"
         aws s3 sync ./_site/ "s3://${{ env.BUCKET_NAME }}"  --delete ${{ env.EXCLUDE_ARGS }}
 
 ```
