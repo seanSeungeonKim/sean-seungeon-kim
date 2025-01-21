@@ -1,6 +1,6 @@
 ---
 layout: projects
-permalink: "/projects"
+permalink: "/projects/"
 title: "Sean Kim"
 description: "This is Sean's website"
 

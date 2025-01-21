@@ -37,8 +37,11 @@ cta:
   enabled: true
   heading: "My Website Is On AWS Cloud"
   description: ""
-  awsImages: 
-  - "assets/images/photos/Route\ 53.png"
-  - "assets/images/photos/CloudFront.png"
-  - "assets/images/photos/Simple\ Storage\ Service.png"
+  awsImages:
+    width: 100
+    height: 100
+    url: 
+      - "assets/images/photos/Route\ 53.png"
+      - "assets/images/photos/CloudFront.png"
+      - "assets/images/photos/Simple\ Storage\ Service.png"
 ---

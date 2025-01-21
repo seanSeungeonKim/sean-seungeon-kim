@@ -128,8 +128,10 @@ body_classes: page-home
 
           {% if page.cta.awsImages %}
           <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
-            {% for image in page.cta.awsImages %}
-            <img style="width: 125px; height: 125px; object-fit: cover;" src="{{ image | relative_url }}">
+            {% for image in page.cta.awsImages.url %}
+            {% assign width = page.cta.awsImages.width %}
+            {% assign height = page.cta.awsImages.height %}
+            <img style="width: {{ width }}px; height: {{ height }}px; object-fit: cover;" src="{{ image | relative_url }}">
             {% endfor %}
           </div>
           {% endif %}
