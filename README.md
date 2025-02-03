@@ -240,3 +240,40 @@ This is how it looks at a bigger picture
             ${{ env.EXCLUDE_ARGS }}
 
 ```
+
+# Jan 28
+
+## Send Resume Email with API Gateway and Lambda
+
+In order to send email with resume attached, you need to provision the following resources:
+
+- Create SES and verify my email
+- Create Lambda
+  - Create Lambda Execution Role to allow `SES` actions
+- Create API Gateway
+
+You can manaully provision them but I decided to use `AWS SAM`, Serverless Application Model
+
+```bash
+# package cloudformation
+## This will take SAM template and generate CF template under gen/ and upload it to s3 bucket
+sam package --s3-bucket sean-seungeon-kim.com --s3-prefix sam --template-file template.yaml --output-template-file gen/template-generated.yaml --region us-east-1
+
+# Deploy the package
+aws cloudformation deploy --template-file gen/template-generated.yaml --stack-name send-resume-email --capabilities CAPABILITY_IAM --region us-east-1
+```
+
+Learnings:
+- You need to specify `--region` and `--capabilities`. `capabilities` is used to grant permission to provision stacks
+
+
+Bypass the CF 
+```bash
+sam sync --capabilities CAPABILITY_IAM --code --resource AWS::Serverless::Function
+```
+
+# Feb 3
+
+Sending request to API Gateway worked. But the problem is that It returns a plain text when the user submits the button. How do I resolve it?
+
+- Create a custom response in API Gateway to redirect the Lambda response to my website path. Something like `/submit-success`.
